@@ -49,9 +49,27 @@ public class HotelTest {
     }
 
     @Test
+    public void canCheckGuestOutOfBedroom() {
+        hotel1.addBedroom(bedroom1);
+        hotel1.bedroomCheckin(bedroom1, guest1);
+        hotel1.bedroomCheckout(bedroom1, guest1);
+        assertEquals(0, bedroom1.getNumberOfGuests());
+    }
+
+    @Test
     public void canCheckGuestIntoConferenceRoom() {
         hotel1.addConferenceRoom(confRoom1);
         hotel1.confRoomCheckIn(confRoom1, guest1);
         assertEquals(1, confRoom1.getNumberOfGuests());
     }
+
+    @Test
+    public void canCheckGuestOutOfConferenceRoom() {
+        hotel1.addConferenceRoom(confRoom1);
+        hotel1.confRoomCheckIn(confRoom1, guest1);
+        hotel1.confRoomCheckOut(confRoom1, guest1);
+        assertEquals(0, confRoom1.getNumberOfGuests());
+    }
+
+
 }

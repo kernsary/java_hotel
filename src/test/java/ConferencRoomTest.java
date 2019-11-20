@@ -36,6 +36,13 @@ public class ConferencRoomTest {
     }
 
     @Test
+    public void canRemoveGuest() {
+        confRoom1.addGuest(guest1);
+        confRoom1.removeGuest(guest1);
+        assertEquals(0, confRoom1.getNumberOfGuests());
+    }
+
+    @Test
     public void knowsIfFull() {
         confRoom1.addGuest(guest1);
         assertEquals(true, confRoom1.isFull());

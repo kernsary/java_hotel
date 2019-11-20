@@ -37,4 +37,12 @@ public class Hotel {
             confRoom1.addGuest(guest1);
         }
     }
+
+    public void bedroomCheckout(Bedroom bedroom1, Guest guest1) {
+        bedroom1.removeGuest(guest1);
+    }
+
+    public void confRoomCheckOut(ConferenceRoom confRoom1, Guest guest1) {
+        confRoom1.removeGuest(guest1);
+    }
 }

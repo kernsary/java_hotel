@@ -37,4 +37,8 @@ public class Bedroom {
     public void addGuest(Guest guest1) {
         guests.add(guest1);
     }
+
+    public void removeGuest(Guest guest1) {
+        guests.remove(guest1);
+    }
 }
