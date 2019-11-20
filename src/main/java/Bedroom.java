@@ -47,4 +47,8 @@ public class Bedroom {
     public int getRate() {
         return rate;
     }
+
+    public boolean isEmpty() {
+        return getNumberOfGuests() == 0;
+    }
 }

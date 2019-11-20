@@ -27,7 +27,7 @@ public class Hotel {
     }
 
     public void bedroomCheckin(Bedroom bedroom1, Guest guest1) {
-        if(!bedroom1.isFull()){
+        if(bedroom1.isEmpty()){
             bedroom1.addGuest(guest1);
         }
     }
@@ -44,5 +44,15 @@ public class Hotel {
 
     public void confRoomCheckOut(ConferenceRoom confRoom1, Guest guest1) {
         confRoom1.removeGuest(guest1);
+    }
+
+    public ArrayList<Bedroom> getEmptyBedrooms() {
+        ArrayList<Bedroom> emptyBedrooms = new ArrayList<Bedroom>();
+        for(Bedroom room : bedrooms) {
+            if(room.isEmpty()){
+                emptyBedrooms.add(room);
+            }
+        }
+        return emptyBedrooms;
     }
 }
