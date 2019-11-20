@@ -40,7 +40,7 @@ public class ConferencRoomTest {
         confRoom1.addGuest(guest1);
         assertEquals(true, confRoom1.isFull());
     }
-    
+
     @Test
     public void knowsIfNotFull() {
         assertEquals(false, confRoom1.isFull());
