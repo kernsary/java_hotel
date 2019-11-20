@@ -21,5 +21,12 @@ public class BookingTest {
         assertEquals(2, booking1.getNumberOfNights());
     }
 
+    @Test
+    public void canGetBill() {
+        booking1.bookRoom(bedroom1, 2);
+        assertEquals(20, booking1.getBill());
+
+    }
+
 
 }
